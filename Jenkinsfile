@@ -1,6 +1,6 @@
 Jenkinsfile (Scripted Pipeline)
 /* Requires the Docker Pipeline plugin */
-node('docker') {
+node('master') {
     checkout scm
     stage('Build') {
         docker.image('maven:3.3.3').inside {
