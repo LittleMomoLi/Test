@@ -13,7 +13,7 @@ pipeline{
         }
         stage('delivery'){
             steps{
-            mail bcc: '', body: 'Hi Pipeline', cc: '', from: '', replyTo: '', subject: 'PipelineTest', to: 'momol@wicresoft.com'
+            mail bcc: '', body: 'Hi Pipeline', cc: '', from: '', replyTo: '', subject: 'PipelineTest', to: '1336580344@qq.com'
             }
         }
     }
