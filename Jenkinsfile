@@ -13,7 +13,7 @@ pipeline{
         }
     }
         post{
-            success{
+            failure{
                 script{
                     mail bcc: '', body: 'success!', cc: '', from: 'v-lmengn@microsoft.com', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com' 
                 }
