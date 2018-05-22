@@ -6,16 +6,25 @@ pipeline{
                 sh 'gcc -o add Add.c'
             }
         }
+        stage('Test'){
+            steps{
+                
+            }
+        }
         stage('delivery'){
             steps{
-            mail bcc: '', body: 'Hi Pipeline!!!', cc: '', from: '1336580344@qq.com', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com'
-            }
+      
         }
     }
         post{
+            success{
+                script{
+                    mail bcc: '', body: ${JOB_NAME}':success!', cc: '', from: '1336580344@qq.com', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com'
+                }
+            }
             failure{
                 script{
-                    mail bcc: '', body: 'success!', cc: '', from: '1336580344@qq.com', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com' 
+                    mail bcc: '', body: ${JOB_NAME}':failure!#'${BUILD_NUMBER}, cc: '', from: '1336580344@qq.com', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com' 
                 }
             }
         }
