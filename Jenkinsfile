@@ -18,6 +18,7 @@ pipeline{
             mail bcc: '', body: 'Hi Pipeline!!!', cc: '', from: '1336580344@qq.com', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com'
             }
         }
+    }
         post{
             success{
                 script{
@@ -25,6 +26,5 @@ pipeline{
                 }
             }
         }
-    }
   }
 
