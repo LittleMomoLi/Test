@@ -1,8 +1,21 @@
-node('cm-cent7x64-p4') {
-    checkout scm
-    stage('Build') {
-        docker.image('maven:3.3.3').inside {
-            sh 'mvn --version'
+pipeline{
+    agent{lable 'cm-cent7x64-p4'}
+    stages{
+        stage('build'){
+            steps{
+                sh 'gcc -o add Add.c'
+            }
+        }
+        stage('test'){
+             steps{
+                echo 'Test'
+                }
+        }
+        stage('delivery'){
+            steps{
+            mail bcc: '', body: 'Hi Pipeline', cc: '', from: '', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com'
+            }
         }
     }
-}
+  }
+
