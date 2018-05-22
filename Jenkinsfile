@@ -13,7 +13,7 @@ pipeline{
         }
         stage('delivery'){
             steps{
-      
+            }
         }
     }
         post{
