@@ -1,5 +1,5 @@
 pipeline{
-    agent{lable 'cm-cent7x64-p4'}
+    agent{label 'cm-cent7x64-p4'}
     stages{
         stage('build'){
             steps{
