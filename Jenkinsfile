@@ -8,14 +8,14 @@ pipeline{
         }
         stage('delivery'){
             steps{
-            mail bcc: '', body: 'Hi Pipeline!!!', cc: '', from: 'v-lmengn@microsoft.com', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com'
+            mail bcc: '', body: 'Hi Pipeline!!!', cc: '', from: '1336580344@qq.com', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com'
             }
         }
     }
         post{
             failure{
                 script{
-                    mail bcc: '', body: 'success!', cc: '', from: 'v-lmengn@microsoft.com', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com' 
+                    mail bcc: '', body: 'success!', cc: '', from: '1336580344@qq.com', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com' 
                 }
             }
         }
