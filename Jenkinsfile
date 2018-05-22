@@ -15,7 +15,7 @@ pipeline{
         post{
             success{
                 script{
-                    mail bcc: '', body: '${JOB_NAME}success', cc: '', from: '1336580344@qq.com', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com' 
+                    mail bcc: '', body: 'success', cc: '', from: '1336580344@qq.com', replyTo: '', subject: 'PipelineTest', to: 'v-lmengn@microsoft.com' 
                 }
             }
         }
